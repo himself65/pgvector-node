@@ -19,13 +19,13 @@ jobs:
       # Node.js
       - uses: actions/setup-node@v4
       - run: npm install
-      - run: npx prisma migrate dev
+      # - run: npx prisma migrate dev
       - run: npm test
 
       # Bun
       - uses: oven-sh/setup-bun@v1
       - run: bun install
-      - run: bunx prisma migrate reset --force
+      # - run: bunx prisma migrate reset --force
       - run: bun run test
 
       # Deno
